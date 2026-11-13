@@ -1,0 +1,6 @@
+streamlit>=1.36
+pandas
+joblib
+# WAJIB: samakan dengan versi saat training (jalankan `pip show scikit-learn` di environment notebook)
+# lalu ubah baris di bawah menjadi mis. scikit-learn==1.5.2
+scikit-learn

@@ -1,0 +1,14 @@
+{
+  "model_name": "Linear SVM",
+  "text_column": "reviewContent",
+  "target_column": "sentiment",
+  "dataset_rows": 36629,
+  "best_metrics": {
+    "Model": "Linear SVM",
+    "Accuracy": 0.9499044499044499,
+    "Balanced Accuracy": 0.8086044304955553,
+    "Precision": 0.9626457994980068,
+    "Recall": 0.9828157974072957,
+    "F1": 0.9726262400238681
+  }
+}
