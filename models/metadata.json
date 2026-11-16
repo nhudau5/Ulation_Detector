@@ -1,14 +1,15 @@
 {
-  "model_name": "Linear SVM",
+  "model_name": "Naive Bayes",
   "text_column": "reviewContent",
   "target_column": "sentiment",
-  "dataset_rows": 36629,
+  "feature_extraction": "FeatureUnion(word_tfidf(1,2), char_wb_tfidf(3,5))",
+  "dataset_rows": 34830,
   "best_metrics": {
-    "Model": "Linear SVM",
-    "Accuracy": 0.9499044499044499,
-    "Balanced Accuracy": 0.8086044304955553,
-    "Precision": 0.9626457994980068,
-    "Recall": 0.9828157974072957,
-    "F1": 0.9726262400238681
+    "Model": "Naive Bayes",
+    "Accuracy": 0.9320987654320988,
+    "Balanced Accuracy": 0.8741834394957615,
+    "F1 Macro": 0.8307023202580377,
+    "F1 Negative": 0.6996825396825397,
+    "F1 Positive": 0.9617221008335356
   }
 }
