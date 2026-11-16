@@ -38,10 +38,10 @@ NORMALIZATION_DICT = {
 STOPWORDS = {
     "yang", "dan", "di", "ke", "dari", "untuk", "dengan", "ini", "itu", "pada",
     "adalah", "sebagai", "karena", "atau", "juga", "sudah", "akan", "ada", "dalam",
-    "saya", "aku", "kami", "kita", "mereka", "dia", "nya", "saja", "lebih",
-    "sangat", "bisa", "dapat", "oleh", "jadi", "agar", "buat", "seperti", "sama",
+    "saya", "aku", "kami", "kita", "mereka", "dia", "nya", "saja",
+    "bisa", "dapat", "oleh", "jadi", "agar", "buat", "seperti", "sama",
     "kalau", "ketika", "saat",
-} - {"tidak", "bukan", "belum", "kurang", "bagus", "buruk"}
+} - {"tidak", "bukan", "belum", "kurang", "bagus", "buruk", "sangat", "lebih"}
 
 
 def clean_text(text):
@@ -49,6 +49,7 @@ def clean_text(text):
     text = re.sub(r"http\S+|www\.\S+", " ", text)
     text = re.sub(r"@[A-Za-z0-9_]+", " ", text)
     text = re.sub(r"#[A-Za-z0-9_]+", " ", text)
+    text = re.sub(r"(.)\1{2,}", r"\1\1", text)
     text = re.sub(r"\d+", " ", text)
     text = re.sub(r"[^a-zA-ZÀ-ÿ\s]", " ", text)
     return re.sub(r"\s+", " ", text).strip()
